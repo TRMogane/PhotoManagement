@@ -20,7 +20,7 @@ namespace PhotoManagement.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("PhotoManagementContextConnection")));
 
-                services.AddDefaultIdentity<PhotoManagementUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                services.AddDefaultIdentity<PhotoManagementUser>(options => options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<PhotoManagementContext>();
             });
         }

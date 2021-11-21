@@ -4,12 +4,13 @@
       "type": "mssql",
       "connectionId": "ConnectionStrings:PhotoManagementContextConnection"
     },
-    "secrets1": {
-      "type": "secrets"
-    },
     "storage1": {
       "type": "storage",
       "connectionId": "ConnectionStrings:StorageConnectionString"
+    },
+    "secrets1": {
+      "type": "secrets",
+      "connectionId": "VaultUri"
     }
   }
 }

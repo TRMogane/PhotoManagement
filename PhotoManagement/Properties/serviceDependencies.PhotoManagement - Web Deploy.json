@@ -5,6 +5,18 @@
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/lakes/databases/Pictures3",
       "type": "mssql.azure",
       "connectionId": "ConnectionStrings:PhotoManagementContextConnection"
+    },
+    "storage1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/csb10037ffe95bacabd",
+      "type": "storage.azure",
+      "connectionId": "ConnectionStrings:StorageConnectionString"
+    },
+    "secrets1": {
+      "secretStore": null,
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/PhotoManagementvault",
+      "type": "secrets.keyVault",
+      "connectionId": "VaultUri"
     }
   }
 }

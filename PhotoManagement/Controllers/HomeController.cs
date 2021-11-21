@@ -56,7 +56,8 @@ namespace PhotoManagement.Controllers
         {
             try
             {
-                var storageConnectionString = configuration.GetValue<string>("StorageConnectionString");
+                //var storageConnectionString = configuration.GetValue<string>("StorageConnectionString");
+                var storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=csb10037ffe95bacabd;AccountKey=SubShk36YBwsaexzFMvSNxqXfyhMHZ9bVtyv+2PnMQUVH+RDD1Q+dlCzEH+eINVlKQeucNPIkODBgXpg/Sj5LA==;EndpointSuffix=core.windows.net";
 
                 var storageAccount = CloudStorageAccount.Parse(storageConnectionString);
 
@@ -79,6 +80,7 @@ namespace PhotoManagement.Controllers
                 } while (blobContinuationToken != null);
 
                 return View(allBlobs);
+                //return View();
             }
             catch (Exception ex)
             {
